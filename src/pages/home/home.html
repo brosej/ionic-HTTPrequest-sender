@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     Commander
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <p>API URL:</p>
+  <ion-item>
+  <ion-input [(ngModel)]="url" type="text"></ion-input>
+ </ion-item>
+  <br>
+  <ion-grid>
+    <ion-row>          
+        <button ion-button block col-6 offset-3 (click)="command('up')"  ><ion-icon name="md-arrow-round-up"></ion-icon></button>                                  
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <button ion-button block (click)="command('left')" ><ion-icon name="md-arrow-round-back"></ion-icon></button>
+        </ion-col>
+        <ion-col>
+          <button ion-button block (click)="command('right')"  ><ion-icon name="md-arrow-round-forward"></ion-icon></button>
+        </ion-col>       
+    </ion-row>
+    <ion-row>          
+        <button ion-button block col-6 offset-3 (click)="command('down')"  ><ion-icon name="md-arrow-round-down"></ion-icon></button>                                  
+    </ion-row>
+  </ion-grid>
+</ion-content>
